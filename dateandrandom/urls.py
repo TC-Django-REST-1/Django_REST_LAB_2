@@ -19,7 +19,7 @@ from date import views as date_views
 from randomnum import views as randomnum_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path("my_app/date/", date_views.date, name='date'),
-    path("my_app/random/", randomnum_views.random_num, name='random_number'),
+    path("admin/", admin.site.urls),
+    path("my_app/date/", date_views.date, name="date"),
+    path("my_app/random/", randomnum_views.random_num, name="random_number"),
 ]
