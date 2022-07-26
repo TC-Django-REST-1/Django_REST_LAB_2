@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'my_app.apps.MyAppConfig',
+    'IMDB.apps.ImdbConfig',
 ]
 
 MIDDLEWARE = [

@@ -5,7 +5,6 @@ import datetime
 from random import choice
 
 
-
 @api_view(['GET'])
 def date(request):
 
@@ -31,9 +30,7 @@ def random(request : Request):
             "msg" : "Not Allowed. Please provide a min that is bigger than 0"
         }
     else:
-        # rand = random.randint(min_num, max_num)
         rand = choice(range(min_num, max_num))
-        # rand = max_num - min_num 
 
         response_data = {
             "random" : rand,
