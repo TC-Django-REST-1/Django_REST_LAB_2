@@ -19,9 +19,16 @@ def GetTodayDate(request : Request):
 
 
 
-# @api_view(['POST'])
-# def random(request : Request):
-#     response_data = {
-        
-#     }
-#     return Response(response_data)
+@api_view(['POST'])
+def random_number(request : Request):
+    min_num = request.data["min"]
+    max_num = request.data["max"]
+    if min_num < 0:
+        response_data = { "msg" : "Not Allowed. Please provide a min that is bigger than 0" }
+        return Response(response_data)
+    
+    random_num = random.randint(min_num, max_num)
+    response_data = { "random": random_num }
+
+    return Response(response_data)
+

@@ -5,5 +5,5 @@ app_name = "LabApp"
 
 urlpatterns = [
     path("date/", views.GetTodayDate),
-    # path("random/", views.random)
+    path("random_number/", views.random_number)
 ]
